@@ -6,7 +6,7 @@ public class Main {
         Dog dog1 = new Dog();
         dog1.bark();
         dog1.name = "Bart";
-        
+
         Dog[] myDogs = new Dog[3];
 
         myDogs[0] = new Dog();
