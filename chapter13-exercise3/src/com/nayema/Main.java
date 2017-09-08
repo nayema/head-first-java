@@ -5,8 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class Main implements ActionListener{
-public JTextArea text;
+public class Main implements ActionListener {
+    public JTextArea text;
 
     public static void main(String[] args) {
         Main gui = new Main();
