@@ -1,5 +1,7 @@
 package com.nayema;
 
+//BORDER LAYOUT
+
 import javax.swing.*;
 import java.awt.*;
 
