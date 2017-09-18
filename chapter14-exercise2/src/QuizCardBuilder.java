@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -33,8 +34,9 @@ public class QuizCardBuilder {
         cardList = new ArrayList<>();
 
         JMenuBar menuBar = new JMenuBar();
-        
+
         JMenu fileMenu = new JMenu("File");
+
         JMenuItem newMenuItem = new JMenuItem("New");
         newMenuItem.addActionListener(new NewMenuListener());
         fileMenu.add(newMenuItem);
@@ -42,10 +44,13 @@ public class QuizCardBuilder {
         JMenuItem saveMenuItem = new JMenuItem("Save");
         saveMenuItem.addActionListener(new SaveMenuListener());
         fileMenu.add(saveMenuItem);
+        menuBar.add(fileMenu);
 
         frame = new JFrame("Quiz Card Builder");
+        frame.setJMenuBar(menuBar);
         frame.setContentPane(mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setPreferredSize(new Dimension(500, 500));
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
